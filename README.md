@@ -3,6 +3,8 @@ optune-mailer
 
 Opinionated package for simplifying mailing via mandrill.com
 
+[ ![Codeship Status for optune/optune-mailer](https://codeship.com/projects/9483dc80-0ba0-0133-52c5-265ef25499ca/status?branch=master)](https://codeship.com/projects/90874)
+
 ## Preconditions
 1. CoffeeScript
 2. A Mandrill account

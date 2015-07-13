@@ -1,0 +1,33 @@
+{
+  "name": "optune-mailer",
+  "version": "0.0.1",
+  "description": "Opinionated package for simplifying mailing via mandrill.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:optune/optune-mailer.git"
+  },
+  "keywords": [
+    "optune",
+    "mandrill",
+    "mailer"
+  ],
+  "author": "Simon Schmid <simon@schmid.io> (http://www.schmid.io)",
+  "license": "LGPL 3",
+  "bugs": {
+    "url": "https://github.com/optune/optune-mailer/issues"
+  },
+  "main": "src/mailer.coffee",
+  "dependencies": {
+    "coffee-script": "^1.9.3",
+    "nodemailer": "^1.4.0",
+    "nodemailer-mandrill-transport": "^0.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "dotenv": "^1.2.0",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}

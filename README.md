@@ -13,7 +13,7 @@ Opinionated package for simplifying mailing via mandrill.com
 
 ## Installation
 
-    npm install scrollfit --save
+    npm install optune-mailer --save
 
 
 ## Usage

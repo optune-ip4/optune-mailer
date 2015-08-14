@@ -21,6 +21,15 @@ Opinionated package for simplifying mailing via mandrill.com
 
     mailer.sendText 'Debug <debug@optune.me>', 'Test subject', 'Test body', callback
 
+    # Events:
+    mailer.on 'send', (opts) ->
+        console.log opts
+        # opts:
+        #   from: ...
+        #   to: ...
+        #   subject: ...
+        #   text or html: ...
+
 
 ## [Expected ENV Vars](http://12factor.net/config)
 (For testing, put a .env file in the root with the following content)

@@ -17,8 +17,9 @@ class OptuneMailer extends EventEmitter
             subject: subject
             text: text
 
-        @emit('send', opts)
-        @_transporter.sendMail(opts, callback)
+        @_transporter.sendMail opts, (err, info) =>
+            @emit('send', opts)
+            callback( err, info )
 
     sendHtml: (to, subject, html, callback) ->
         if not @_initialized then @init()
@@ -29,8 +30,9 @@ class OptuneMailer extends EventEmitter
             subject: subject
             html: html
 
-        @emit('send', opts)
-        @_transporter.sendMail(opts, callback)
+        @_transporter.sendMail opts, (err, info) =>
+            @emit('send', opts)
+            callback( err, info )
 
     init: (defaultFrom, transporter) ->
         mandrill = require 'nodemailer-mandrill-transport'

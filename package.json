@@ -1,6 +1,6 @@
 {
   "name": "optune-mailer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Opinionated package for simplifying mailing via mandrill.com",
   "repository": {
     "type": "git",

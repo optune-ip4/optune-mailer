@@ -23,3 +23,12 @@ describe 'mailer', ->
     it 'does not reinitalize on rerequire (singleton)', ->
         m = require '../src/mailer'
         expect( m._initialized ).to.be.true
+
+    it 'emit event on mail', (done) ->
+        mailer.on 'send', (opts) ->
+            expect( opts.text ).to.equal('test')
+            done()
+
+        mailer.sendText 'Debug <debug@optune.me>', 'Test subject', 'test', (err, info) ->
+            if err then done(err)
+

@@ -1,7 +1,8 @@
-nodemailer = require 'nodemailer'
+EventEmitter = require('events').EventEmitter
+nodemailer   = require 'nodemailer'
 
 
-api =
+class OptuneMailer extends EventEmitter
     # private var that knows, if this mailer is already initialized
     _initialized: false
     _transporter: undefined
@@ -16,6 +17,7 @@ api =
             subject: subject
             text: text
 
+        @emit('send', opts)
         @_transporter.sendMail(opts, callback)
 
     sendHtml: (to, subject, html, callback) ->
@@ -27,6 +29,7 @@ api =
             subject: subject
             html: html
 
+        @emit('send', opts)
         @_transporter.sendMail(opts, callback)
 
     init: (defaultFrom, transporter) ->
@@ -39,6 +42,7 @@ api =
         @_defaultFrom = defaultFrom or 'optune.me <support@optune.me>'
 
         @_initialized = true
+        @emit('init', @)
 
 
-module.exports = api
+module.exports = new OptuneMailer

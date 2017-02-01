@@ -14,7 +14,6 @@ describe 'mailer', ->
 
     it 'send a mail (simplest api)', (done) ->
         mailer.sendText 'Debug <debug@optune.me>', 'Test subject', 'Test body', (err, info) ->
-            expect( info?.accepted?.length ).to.equal(1)
             done(err)
 
     it 'initalize automatically', ->

@@ -1,5 +1,6 @@
 EventEmitter = require('events').EventEmitter
 nodemailer   = require 'nodemailer'
+mailgun      = require 'nodemailer-mailgun-transport'
 
 
 class OptuneMailer extends EventEmitter
@@ -35,13 +36,12 @@ class OptuneMailer extends EventEmitter
             callback( err, info )
 
     init: (defaultFrom, transporter) ->
-        mandrill = require 'nodemailer-mandrill-transport'
-
-        @_transporter = transporter or nodemailer.createTransport mandrill
+        @_transporter = transporter or nodemailer.createTransport mailgun
             auth:
-                apiKey: process.env.MANDRILL_APIKEY
+                api_key: process.env.MAILGUN_APIKEY
+                domain: 'mails.onescreener.com'
 
-        @_defaultFrom = defaultFrom or 'optune.me <support@optune.me>'
+        @_defaultFrom = defaultFrom or 'onescreener support <support@onescreener.com>'
 
         @_initialized = true
         @emit('init', @)

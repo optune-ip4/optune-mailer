@@ -20,7 +20,7 @@
   "dependencies": {
     "coffee-script": "^1.9.3",
     "nodemailer": "^1.4.0",
-    "nodemailer-mandrill-transport": "^0.3.0"
+    "nodemailer-mailgun-transport": "^1.2.4"
   },
   "devDependencies": {
     "chai": "^3.0.0",

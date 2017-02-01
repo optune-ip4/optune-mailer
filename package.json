@@ -1,6 +1,6 @@
 {
   "name": "optune-mailer",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Opinionated package for simplifying mailing via mailgun.com",
   "repository": {
     "type": "git",

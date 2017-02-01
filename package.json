@@ -1,14 +1,14 @@
 {
   "name": "optune-mailer",
   "version": "0.0.4",
-  "description": "Opinionated package for simplifying mailing via mandrill.com",
+  "description": "Opinionated package for simplifying mailing via mailgun.com",
   "repository": {
     "type": "git",
     "url": "git@github.com:optune/optune-mailer.git"
   },
   "keywords": [
     "optune",
-    "mandrill",
+    "mailgun",
     "mailer"
   ],
   "author": "Simon Schmid <simon@schmid.io> (http://www.schmid.io)",

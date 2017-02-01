@@ -1,13 +1,13 @@
 optune-mailer
 =============
 
-Opinionated package for simplifying mailing via mandrill.com
+Opinionated package for simplifying mailing via mailgun.com
 
 [ ![Codeship Status for optune/optune-mailer](https://codeship.com/projects/9483dc80-0ba0-0133-52c5-265ef25499ca/status?branch=master)](https://codeship.com/projects/90874)
 
 ## Preconditions
 1. CoffeeScript
-2. A Mandrill account
+2. A Mailgun account
 3. Mandrill API Key in Env vars 
 
 
@@ -34,7 +34,7 @@ Opinionated package for simplifying mailing via mandrill.com
 ## [Expected ENV Vars](http://12factor.net/config)
 (For testing, put a .env file in the root with the following content)
 
-    MANDRILL_APIKEY=YOUR_MANDRILL_API_KEY
+    MAILGUN_APIKEY=YOUR_MAILGUN_API_KEY
 
 
 ## License
